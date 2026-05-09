@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Paria Kids Shop</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <img src="images/Logo.png" class="logo" img-fluid>
+
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">صفحه اصلی</a></li>
+
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown">دخترانه</a>
+            <ul class="dropdown-menu text-end">
+              <li><a class="dropdown-item" href="dress.html">پیراهن</a></li>
+              <li><a class="dropdown-item" href="girl's-t-shirt.html">تیشرت</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">دامن</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown">پسرانه</a>
+            <ul class="dropdown-menu text-end">
+              <li><a class="dropdown-item" href="shirts.html">پیراهن</a></li>
+              <li><a class="dropdown-item" href="boy's-t-shirt.html">تیشرت</a></li>
+              <li><a class="dropdown-item" href="boy's-pants.html">شلوار</a></li>
+              <li><a class="dropdown-item" href="shorts.html">شلوارک</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown">اکسسوری</a>
+            <ul class="dropdown-menu text-end">
+              <li><a class="dropdown-item" href="#">اکسسوری دخترانه</a></li>
+              <li><a class="dropdown-item" href="#">اکسسوری پسرانه</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="new.html">جدیدترین‌ها</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+
+          <input type="text" id="searchInput" class="form-control form-control-sm" style="width: 150px;"
+            placeholder="جستجوی محصول ...">
+
+          <a href="wishlist.html" id="fav" class="wishlist-add">
+            <i class="fa fa-heart"></i>
+          </a>
+
+          <i class="fa fa-shopping-cart" id="cartBtn"></i>
+          <button id="darkToggle" class="btn btn-sm btn-outline-dark">
+            🌙
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 HERO -->
+  <section class="hero container mt-4">
+
+    <div class="video-container text-center">
+      <video autoplay muted loop class="film w-100">
+        <source src="video/video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+
+  </section>
+
+  <section class="container text-center mt-2">
+
+    <h3 class="colorful-title" font-family: Vazirmatn, sans-serif; line-height: 1.8;">
+      <span>برای</span>
+      <span>کودکانی که</span>
+      <span>دنیا را با</span>
+      <span>چشم های</span>
+      <span>پاک شان</span>
+      <span>زیباتر</span>
+      <span>می بینند</span>
+      <span>...</span>
+    </h3>
+
+    <br>
+
+    <p style="font-size: 18px; color: #555; line-height: 2; margin-top: 15px;">
+      ما لباس‌هایی طراحی کرده‌ایم که راحتی، سادگی و زیبایی را کنار هم دارند.<br>
+      چون باور داریم هر کودک، شایسته بهترین‌هاست.
+    </p>
+
+
+    <div class="text-center mt-3">
+      <button class="btn btn-main">مشاهده محصولات</button>
+    </div>
+
+  </section>
+
+  <div id="items" class="categories">
+    <div class="box"><a href="girl's-t-shirt.html">تیشرت</a></div>
+    <div class="box"><a href="boy's-pants.html">شلوار</a></div>
+    <div class="box"><a href="boy's-t-shirt.html">ست ها</a></div>
+    <div class="box"><a href="girl's-t-shirt.html">لباس راحتی</a></div>
+    <div class="box"><a href="dress.html">پیراهن</a></div>
+    <div class="box"><a href="boy's-accessory.html">اکسسوری</a></div>
+    <div class="box"><a href="shorts.html">شلوارک</a></div>
+    <div class="box"><a href="skirt.html">دامن</a></div>
+    <div class="box"><a href="new.html">جدیدترین‌ها</a></div>
+  </div>
+
+  <section class="hero container mt-4">
+    <div class="carousel slide" id="mainSlider" data-bs-ride="carousel" data-bs-interval="3000"></div>
+    <div id="mainSlider" class="carousel slide" data-bs-ride="carousel">
+      <div id="mainSlider" class="carousel slide carousel-fade"></div>
+
+      <div class="carousel-inner">
+
+        <!-- slide 1 -->
+        <div class="carousel-item active">
+          <img src="images/1.JPG" class="w-100 slider-img">
+
+          <div class="slider-content text-center">
+            <h2>استایل خاص برای کوچولوها ✨</h2>
+            <p>لباس‌های راحت و شیک کودکانه</p>
+            <button class="btn btn-main">مشاهده محصولات</button>
+          </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div class="carousel-item">
+          <img src="images/2.JPG" class="w-100 slider-img">
+
+          <div class="slider-content text-center">
+            <h2>تخفیف‌های ویژه 🎉</h2>
+            <p>تا ۳۰٪ تخفیف برای مدل‌های جدید</p>
+            <button class="btn btn-main">خرید کن</button>
+          </div>
+        </div>
+
+        <!-- slide 3 -->
+        <div class="carousel-item">
+          <img src="images/boy's pants/1.JPG" class="w-100 slider-img">
+
+          <div class="slider-content text-center">
+            <h2>کیفیت مهمه ❤️</h2>
+            <p>بهترین پارچه برای پوست حساس کودک</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 🔹 PRODUCTS -->
+  <section id="productsSection" class="container mt-5">
+    <h3 class="text-center">پرفروش ترین ها</h3>
+    <div class="container my-5">
+
+      <div class="row g-4">
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+          <div class="card product-card">
+
+            <img src="images/dress/1.JPG" alt="پیراهن دخترانه" class="card-img-top">
+
+            <div class="card-body text-center">
+
+              <h6>پیراهن دخترانه</h6>
+              <p>880 AF</p>
+
+              <!-- 🔥 دکمه‌ها -->
+              <div class="d-flex justify-content-center gap-2 mt-2">
+
+                <a href="#" class="wishlist-add">
+                  <i class="fa fa-heart"></i>
+                </a>
+
+                <!-- 🛒 سبد خرید -->
+                <button class="btn btn-main btn-sm add-btn">
+                  <i class="fa fa-shopping-cart"></i> افزودن
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+          <div class="card product-card">
+
+            <img src="images/dress/2.JPG" alt="پیراهن دخترانه" class="card-img-top">
+
+            <div class="card-body text-center">
+
+              <h6>پیراهن دخترانه</h6>
+              <p>880 AF</p>
+
+              <!-- 🔥 دکمه‌ها -->
+              <div class="d-flex justify-content-center gap-2 mt-2">
+
+                <a href="#" class="wishlist-add">
+                  <i class="fa fa-heart"></i>
+                </a>
+
+                <!-- 🛒 سبد خرید -->
+                <button class="btn btn-main btn-sm add-btn">
+                  <i class="fa fa-shopping-cart"></i> افزودن
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+          <div class="card product-card">
+
+            <img src="images/dress/3.JPG" alt="پیراهن دخترانه" class="card-img-top">
+
+            <div class="card-body text-center">
+
+              <h6>پیراهن دخترانه</h6>
+              <p>880 AF</p>
+
+              <!-- 🔥 دکمه‌ها -->
+              <div class="d-flex justify-content-center gap-2 mt-2">
+
+                <a href="#" class="wishlist-add">
+                  <i class="fa fa-heart"></i>
+                </a>
+
+                <!-- 🛒 سبد خرید -->
+                <button class="btn btn-main btn-sm add-btn">
+                  <i class="fa fa-shopping-cart"></i> افزودن
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+
+          <div class="card product-card">
+
+            <img src="images/skirt/3.JPG" alt="دامن بچگانه" class="card-img-top">
+
+            <div class="card-body text-center">
+
+              <h6>دامن بچگانه</h6>
+              <p>1200 AF</p>
+
+              <!-- 🔥 دکمه‌ها -->
+              <div class="d-flex justify-content-center gap-2 mt-2">
+
+                <a href="#" class="wishlist-add">
+                  <i class="fa fa-heart"></i>
+                </a>
+
+                <!-- 🛒 سبد خرید -->
+                <button class="btn btn-main btn-sm add-btn">
+                  <i class="fa fa-shopping-cart"></i> افزودن
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- 🔹 CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <section class="cart-panel" id="cartPanel">
+
+    <div class="cart-header">
+      <h5>سبد خرید</h5>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer">
+      <h6 id="totalPrice">جمع کل: 0</h6>
+
+      <a href="checkout.html" class="checkout-btn">
+        تکمیل سفارش
+      </a>
+    </div>
+
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="mt-5 text-center p-4 bg-light">
+    <p>© 2026 Paria Kids Shop</p>
+  </footer>
+
+  <div id="toastMessage">
+    ✅ محصول به سبد خرید اضافه شد
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

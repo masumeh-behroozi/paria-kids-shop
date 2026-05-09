@@ -1,0 +1,666 @@
+:root {
+  --nav-height: 80px;
+}
+.navbar {
+  height: var(--nav-height);
+}
+
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background: #f6f1eb;
+}
+
+/* 🔹 HERO */
+.hero {
+  background: #f6f1eb;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.btn-main {
+  background: #ffb6b9;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 18px;
+  border: none;
+
+  transform: translateY(0);
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: #f7999c;
+  color: white;
+}
+
+
+/* 🔹 CATEGORY */
+.cat-box {
+  background: linear-gradient(135deg, #c4b5fd, #fbcfe8);
+  padding: 20px;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cat-box:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 PRODUCTS */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 CART */
+.cart-panel {
+  position: fixed;
+  left: -320px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  transition: 0.4s ease;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.cart-panel.active {
+  left: 0;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  /* حداکثر عرض */
+  margin: auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.film {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+  margin-top: 0;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  transition: 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f7999c;
+  color: white;
+}
+
+/* باز شدن dropdown با hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* انیمیشن نرم‌تر */
+.dropdown-menu {
+  transition: 0.2s ease;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.box {
+  min-width: 140px;
+  height: 140px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+  transition: 0.3s;
+}
+
+/* رنگ‌های ملایم و بچگانه */
+.box:nth-child(1) {
+  background: #B8D8FD;
+}
+
+.box:nth-child(2) {
+  background: #C0C0FD;
+}
+
+.box:nth-child(3) {
+  background: #EDD0FD;
+}
+
+.box:nth-child(4) {
+  background: #ffC6F8;
+}
+
+.box:nth-child(5) {
+  background: #ffB3D6;
+}
+
+.box:nth-child(6) {
+  background: #ffcfbc;
+}
+
+.box:nth-child(7) {
+  background: #ffe2c6;
+}
+
+.box:nth-child(8) {
+  background: #f6ebb8;
+}
+
+.box:nth-child(9) {
+  background: #c3cf99;
+}
+
+/* هاور خیلی نرم */
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.colorful-title span:nth-child(1) {
+  color: #B8D8FD;
+}
+
+.colorful-title span:nth-child(2) {
+  color: #C0C0FD;
+}
+
+.colorful-title span:nth-child(3) {
+  color: #EDD0FD;
+}
+
+.colorful-title span:nth-child(4) {
+  color: #ffC6F8;
+}
+
+.colorful-title span:nth-child(5) {
+  color: #ffB3D6;
+}
+
+.colorful-title span:nth-child(6) {
+  color: #ffcfbc;
+}
+
+.colorful-title span:nth-child(7) {
+  color: #ffe2c6;
+}
+
+.colorful-title span:nth-child(8) {
+  color: #f59f00;
+}
+
+.colorful-title span {
+  margin-left: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  margin-bottom: 25px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  /* اندازه ثابت */
+  object-fit: cover;
+  /* خیلی مهم ⭐ */
+  border-radius: 12px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.checkout-box {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+  border: 2px dashed #f7999c;
+}
+
+h4 {
+  color: #f7999c;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ffc0cb;
+}
+
+.form-control:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 5px #ffb6c1;
+}
+
+button {
+  background: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  border: 2px solid #28a745 !important;
+}
+
+/* 🔹 SLIDER (کاملاً هماهنگ با سایت) */
+.slider-img {
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* باکس متن روی اسلایدر */
+.slider-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center;
+}
+
+/* تیتر */
+.slider-content h2 {
+  font-weight: 600;
+  color: #444;
+}
+
+/* متن */
+.slider-content p {
+  color: #666;
+  margin: 10px 0 15px;
+}
+
+/* دکمه هم‌استایل سایت */
+.slider-content .btn-main {
+  font-size: 14px;
+}
+
+/* فلش‌های اسلایدر */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 182, 185, 0.7);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* نقطه‌ها */
+.carousel-indicators button {
+  background-color: #ffb6b9;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* 🔹 CHECKOUT BOX */
+.checkout-box {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(247, 153, 156, 0.2);
+  border: 2px dashed #ffb6b9;
+}
+
+/* عنوان */
+.checkout-box h4 {
+  color: #f7999c;
+  font-weight: 600;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+/* 🔹 INPUT ها */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #ffd1d6;
+  padding: 10px 12px;
+  transition: 0.3s ease;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+/* فوکوس */
+.form-control:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 10px rgba(255, 182, 185, 0.4);
+}
+
+/* placeholder */
+.form-control::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* 🔹 دکمه */
+.checkout-box .btn-main {
+  background: #ffb6b9;
+  color: white;
+  border-radius: 20px;
+  padding: 12px;
+  border: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.checkout-box .btn-main:hover {
+  background: #f7999c;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 خطاها */
+.error {
+  color: #ff4d6d;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* 🔹 موفقیت */
+.success {
+  border: 2px solid #28a745 !important;
+}
+
+/* 🔹 responsive */
+@media (max-width: 768px) {
+  .checkout-box {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* navbar */
+body.dark .navbar {
+  background-color: #1e1e1e !important;
+}
+
+/* cards */
+body.dark .card {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+/* text */
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h6 {
+  color: #f1f1f1;
+}
+
+/* buttons */
+body.dark .btn-main {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* cart panel */
+body.dark .cart-panel {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+/* =========================
+   DARK MODE FIX (NAV + FOOTER)
+========================= */
+
+body.dark .navbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #333;
+}
+
+body.dark .navbar .nav-link {
+  color: #f1f1f1 !important;
+}
+
+body.dark .navbar .fa {
+  color: #f1f1f1;
+}
+
+body.dark footer {
+  background-color: #1a1a1a !important;
+  color: #f1f1f1;
+  border-top: 1px solid #333;
+}
+/* =========================
+   HERO DARK MODE FIX
+========================= */
+
+.hero {
+  transition: 0.3s ease;
+}
+
+/* حالت روشن */
+.hero {
+  background-color: transparent;
+}
+
+/* حالت تاریک */
+body.dark .hero {
+  background-color: #121212;
+}
+
+/* =========================
+   CART SIDEBAR (LEFT SIDE)
+========================= */
+
+.cart-panel {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  height: calc(100vh - var(--nav-height));
+  width: 320px;
+  background: #fff;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* وقتی باز میشه */
+.cart-panel.active {
+  left: 0;  /* 👈 از چپ وارد میشه */
+  transform: translateX(0);
+}
+
+/* overlay همون قبلی می‌مونه */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toastMessage {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 99999;
+}
+
+#toastMessage.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+✅ CHECKOUT BUTTON
+========================= */
+
+.checkout-btn{
+    display: block;
+    width: 100%;
+
+    text-align: center;
+
+    background: #ff6b81;
+    color: white;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    margin-top: 15px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.checkout-btn:hover{
+    background: #ff4f6d;
+    color: white;
+}
+
+#fav{
+  color: #000;
+}
+
+.wishlist-add{
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #f7999c;
+
+    transition: 0.3s;
+}
+
+.wishlist-add:hover{
+    background: #ffe5ec;
+    color: #f28b8f;
+}
+
+#items a{
+  color: white;
+  text-decoration: none;
+}
